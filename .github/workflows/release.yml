@@ -4,12 +4,16 @@ name: "Build and Publish"
 
 on:
   push:
-    branches-ignore:
-      - "main"
+    tags:
+      - wheeler*
+      - mchenry*
+      - lesko*
+      - le*
+      - stechly*
 
 permissions:
   contents: read
-
+#testing stuff
 jobs:
   tag-from-commit:
     runs-on: ubuntu-24.04
